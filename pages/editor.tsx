@@ -46,11 +46,12 @@ export default function EditorPage() {
 
       <main>
         <h1 className="title">
-          Example <a href="https://github.com/codex-team/editor.js">EditorJs</a>
+          {/* Example <a href="https://github.com/codex-team/editor.js">EditorJs</a> */}
+          Notion like editor
         </h1>
         <p className="description">
-          Hit TAB on empty line <code>for toolbar</code>, select text for{" "}
-          <code>more options</code>
+
+          <code>Use 'tab' instead of 'slash'</code>
         </p>
         <p>
           <a href="#" onClick={clearData}>

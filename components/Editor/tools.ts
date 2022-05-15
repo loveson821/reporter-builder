@@ -28,7 +28,30 @@ export const tools = {
     class: Paragraph,
     inlineToolbar: true,
   },
-  embed: Embed,
+  // embed: Embed,
+  // http://lbs.m2mda.com:5588/public/question/0476906e-d8c6-488c-98b8-d6c09e515e3e.json
+  //   <iframe
+  //     src="http://lbs.m2mda.com:5588/public/question/0476906e-d8c6-488c-98b8-d6c09e515e3e"
+  //     frameborder="0"
+  //     width="800"https://www.youtube.com/watch?v=GEL21CrmvV4
+  //     height="600"
+  //     allowtransparency
+  // ></iframe>
+  embed: {
+    class: Embed,
+    config: {
+      services: {
+        metabase: {
+          regex: /https?:\/\/lbs\.m2mda\.com:5588\/(.*)/,
+          // embedUrl: 'http://lbs.m2mda.com:5588/<%= remote_id %>?height=300&theme-id=0&default-tab=css,result&embed-version=2',
+          embedUrl: "http://lbs.m2mda.com:5588/<%= remote_id %>",
+          html: "<iframe height='300' scrolling='no' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'></iframe>",
+          height: 300,
+          width: 600,
+        }
+      }
+    }
+  },
   table: Table,
   warning: Warning,
   code: Code,
