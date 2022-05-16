@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (min-width: 651px) {
+  .codex-editor--narrow .codex-editor__redactor {
+    margin-right: 0;
+  }
+}

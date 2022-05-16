@@ -38,7 +38,7 @@ export default function EditorPage() {
   const disabled = editor === null || loading
 
   return (
-    <div className="container">
+    <div className="container mx-auto">
       <Head>
         <title>EditorJs</title>
         <link rel="icon" href="/favicon.ico" />
@@ -53,17 +53,20 @@ export default function EditorPage() {
 
           <code>Use 'tab' instead of 'slash'</code>
         </p>
+
+        <div className="shadow-lg rounded-lg bg-white " style={{ padding: '20px' }}>
+          <div className="" id="editor-js"></div>
+          <Editor editorRef={setEditor} options={options} data={data} />
+        </div>
+
         <p>
           <a href="#" onClick={clearData}>
             Clear data
           </a>
         </p>
-        <div className="editorContainer">
-          <div className="editor-inside-container" id="editor-js"></div>
-          <Editor editorRef={setEditor} options={options} data={data} />
-        </div>
+
         <button disabled={disabled} type="button" onClick={onSave}>
-          Save &amp; see console &amp; Reload
+          Save
         </button>{" "}
       </main>
 
@@ -79,15 +82,6 @@ export default function EditorPage() {
       </footer>
 
       <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
         main {
           padding: 5rem 0;
           flex: 1;
