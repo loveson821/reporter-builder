@@ -42,9 +42,9 @@ export const tools = {
     config: {
       services: {
         metabase: {
-          regex: /https?:\/\/lbs\.m2mda\.com:5588\/(.*)/,
+          regex: /https?:\/\/metabase\.m2mda\.com\/(.*)/,
           // embedUrl: 'http://lbs.m2mda.com:5588/<%= remote_id %>?height=300&theme-id=0&default-tab=css,result&embed-version=2',
-          embedUrl: "http://lbs.m2mda.com:5588/<%= remote_id %>",
+          embedUrl: "http://metabase.m2mda.com/<%= remote_id %>",
           html: "<iframe height='300' scrolling='no' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'></iframe>",
           height: 300,
           width: 600,
